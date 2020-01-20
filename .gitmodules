@@ -1,0 +1,29 @@
+[submodule "component-compiler-utils"]
+	path = component-compiler-utils
+	url = git@github.com:vuejs/component-compiler-utils.git
+    branch = master
+
+[submodule "vue-style-loader"]
+	path = vue-style-loader
+	url = https://github.com/vuejs/vue-style-loader.git
+    branch = master
+[submodule "vue-loader"]
+	path = vue-loader
+	url = https://github.com/vuejs/vue-loader.git
+    branch = master
+[submodule "vue-eslint-parser"]
+	path = vue-eslint-parser
+	url = https://github.com/mysticatea/vue-eslint-parser.git
+    branch = master
+[submodule "vue"]
+	path = vue
+	url = https://github.com/vuejs/vue.git 
+    branch = master
+[submodule "element"]
+	path = element
+	url = git@github.com:ElemeFE/element.git
+	branch = master
+[submodule "vue-element-admin"]
+	path = vue-element-admin
+	url = https://github.com/PanJiaChen/vue-element-admin.git
+	branch = master
