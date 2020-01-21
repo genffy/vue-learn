@@ -27,3 +27,6 @@
 	path = vue-element-admin
 	url = https://github.com/PanJiaChen/vue-element-admin.git
 	branch = master
+[submodule "vetur"]
+	path = vetur
+	url = git@github.com:vuejs/vetur.git
