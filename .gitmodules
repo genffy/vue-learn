@@ -30,6 +30,8 @@
 [submodule "vetur"]
 	path = vetur
 	url = git@github.com:vuejs/vetur.git
+	branch = master
 [submodule "vue-router"]
 	path = vue-router
 	url = git@github.com:vuejs/vue-router.git
+	branch = master
