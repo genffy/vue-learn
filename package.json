@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sub": "git submodule update --init --recursive"
+    "sub": "git submodule update --init --recursive --remote"
   },
   "author": "lee.genffy@gmail.com",
   "license": "ISC"
