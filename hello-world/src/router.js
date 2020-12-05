@@ -4,8 +4,16 @@ import VueRouter from 'vue-router';
 
 // 1. 定义 (路由) 组件。
 // 可以从其他文件 import 进来
-import Index from './pages/index';
-import Crash from './pages/crash';
+const requireContext = require.context(
+  './pages/',
+  true,
+  /\.vue$/
+)
+
+const components = requireContext.keys().map(filename => {
+  const componentConfig = requireContext(filename)
+  return componentConfig.default || componentConfig;
+})
 
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -13,9 +21,15 @@ import Crash from './pages/crash';
 // 或者，只是一个组件配置对象。
 // 我们晚点再讨论嵌套路由。
 const routes = [
-  { path: '', component: Index },
-  { path: '/crash', component: Crash }
+  { path: '', redirect: 'index', },
 ]
+components.forEach(component => {
+  const fileName = component.__file.split('/').pop().replace(/\.vue$/, '');
+  routes.push({
+    path: `/${fileName}`,
+    component,
+  })
+});
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
