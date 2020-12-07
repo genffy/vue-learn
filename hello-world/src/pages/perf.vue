@@ -7,7 +7,7 @@
 <script>
 import perf from '../components/perf'
 // import dts from './data-dts';
-import menu from './data-menu';
+// import menu from './data-menu';
 export default {
   name: 'pagePerf',
   components: {
@@ -17,7 +17,7 @@ export default {
     return {
       // sellerList: dts.data,
       sellerList: [],
-      permission: menu.data.permission,
+      permission: [], // menu.data.permission,
     }
   },
   methods: {

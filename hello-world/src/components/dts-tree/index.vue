@@ -1,11 +1,11 @@
 <template>
-  <el-dialog
+  <!-- <el-dialog
     :visible.sync="visible"
     title="新建排行榜"
     :modal-append-to-body="false"
     width="900px"
-    custom-class="leader-board"
-  >
+  > -->
+  <div class="leader-board">
     <div class="body">
       <div>
         <tree :data="organization" ref="tree" />
@@ -28,7 +28,8 @@
     <div style="text-align: center" slot="footer">
       <el-button type="primary" @click="handleConfirm">确定</el-button>
     </div>
-  </el-dialog>
+  </div>
+  <!-- </el-dialog> -->
 </template>
 
 <script>
@@ -82,31 +83,54 @@ export default {
       // 构建map
       // eslint-disable-next-line no-unused-vars
       const pathMap = {};
-      let pathArr = [];
-      const traverse = (data, floor = 1, pIdx) => {
-        // console.log('floor', floor);   
-        if(floor == 1){
-          pathArr = [];
-        } else {
-          pathArr.push(pIdx);
+      // // 深度遍历
+      // const DFS = (data, floor = 1, pathArr=[]) => {
+      //   data.forEach((item, idx) => {
+      //     // 去掉多余的
+      //     pathArr.splice(floor);
+      //     item.checked = false;
+      //     item.expand = false;
+      //     item.floor = map[floor]; 
+      //     pathArr[floor-1] = idx;
+      //     const path = pathArr.join('-');
+      //     pathMap[path] = item.value;
+      //     console.log('path', path);
+      //     if (item.children && item.children.length) {
+      //       DFS(item.children, floor + 1, pathArr);
+      //     }
+      //   });
+      // };
+      // DFS(val);
+      // console.log(val);
+      // console.log(pathMap['0-0-1']);
+      // console.log(pathMap['0-0-0']);
+      // console.log(pathMap['1-0-0-2']);
+      // 广度遍历
+      // 广度遍历, 创建一个执行队列, 当队列为空的时候则结束
+      function BFS(data) {
+        let queue = data;
+        let floor = 0;
+        let pathArr = [];
+        while (queue.length > 0) {
+          floor++;
+          [...queue].forEach((item, idx) => {
+            queue.shift();
+            // do stuff
+            item.checked = false;
+            item.expand = false;
+            item.floor = map[floor];
+            pathArr[floor-1] = idx;
+            const path = pathArr.join('-');
+            pathMap[path] = item.value;
+            console.log(item.floor, path);
+            if(item.children && item.children.length > 0){
+              console.log(item.children.length);
+              queue.push(...item.children);
+            }
+          });
         }
-        data.forEach((item, idx) => {
-          item.checked = false;
-          item.expand = false;
-          item.floor = map[floor]; 
-          // pathMap[pathArr.join('-') + idx] = item.value;
-          let arr = [].concat(pathArr);
-          arr.push(idx);
-          console.log('floor-idx', floor, idx, pathArr, arr);
-          // console.log('path-str', pathArr, arr.join('-'));
-          if (item.children && item.children.length) {
-            traverse(item.children, floor + 1, idx);
-          }
-          
-        });
-      };
-      traverse(val);
-      console.log(val);
+      }
+      BFS(val);
     }
   },
   methods: {
@@ -222,7 +246,7 @@ export default {
   }
   .body {
     display: flex;
-    max-height: 50vh;
+    // max-height: 50vh;
     overflow: auto;
     & > div {
       flex: 1;
