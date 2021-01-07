@@ -23,8 +23,8 @@
 	url = https://github.com/vuejs/vue.git 
   branch = master
   ignore = all
-[submodule "element"]
-	path = element
+[submodule "elements/element"]
+	path = elements/element
 	url = git@github.com:ElemeFE/element.git
 	branch = master
   ignore = all
