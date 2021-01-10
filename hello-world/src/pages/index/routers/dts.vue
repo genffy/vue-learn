@@ -14,8 +14,8 @@
 /* eslint-disable no-unused-vars */
 // import dts from './data-dts';
 // import bdts from './data-bdts';
-import dtsTree from '@/components/dts-tree/index';
-import data from '@/mock/tree';
+import dtsTree from '@component/dts-tree/index';
+import data from '@mock/tree';
 const map = {
   1: "buId",
   2: "districtId",

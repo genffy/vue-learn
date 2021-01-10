@@ -24,6 +24,7 @@
     "babel-plugin-component": "^1.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "glob": "^7.1.6",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

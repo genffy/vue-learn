@@ -5,7 +5,7 @@
   </div>  
 </template>
 <script>
-import perf from '../components/perf'
+import perf from '@component/perf'
 // import dts from './data-dts';
 // import menu from './data-menu';
 export default {

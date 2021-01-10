@@ -7,7 +7,10 @@
     <title>Element</title>
   </head>
   <body>
-    <div id="app"></div><% if (process.env.NODE_ENV === 'production') { %>
+    <div id="app"></div>
+    <script src="//localhost:9000/local/vue.2.6.11.js"></script>
+    <!-- <script src="//localhost:9000/local/vue.2.2.6.js"></script> -->
+    <% if (process.env.NODE_ENV === 'production') { %>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.runtime.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue-router/2.1.1/vue-router.min.js"></script><% } %>
   </body>

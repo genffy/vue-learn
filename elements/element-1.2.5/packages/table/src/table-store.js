@@ -311,6 +311,9 @@ TableStore.prototype.updateColumns = function() {
 };
 
 TableStore.prototype.isSelected = function(row) {
+  // why ??????
+  // console.log('isSelected', ([].concat(this.states.selection)).indexOf(row));
+  // console.log('isSelectedOrigin', JSON.parse(JSON.stringify(this.states.selection || [])).indexOf(JSON.parse(JSON.stringify(row))));
   return (this.states.selection || []).indexOf(row) > -1;
 };
 
