@@ -1,53 +1,60 @@
 [submodule "component-compiler-utils"]
 	path = component-compiler-utils
 	url = git@github.com:vuejs/component-compiler-utils.git
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "vue-style-loader"]
 	path = vue-style-loader
 	url = https://github.com/vuejs/vue-style-loader.git
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "vue-loader"]
 	path = vue-loader
 	url = https://github.com/vuejs/vue-loader.git
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "vue-eslint-parser"]
 	path = vue-eslint-parser
 	url = https://github.com/mysticatea/vue-eslint-parser.git
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "vue"]
 	path = vue
 	url = https://github.com/vuejs/vue.git 
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "elements/element"]
 	path = elements/element
 	url = git@github.com:ElemeFE/element.git
 	branch = master
-  ignore = all
+	ignore = all
+[submodule "elements/element-1.2.5"]
+	path = elements/element-1.2.5
+	url = git@github.com:ElemeFE/element.git
+	tag = "v1.2.5"
+	ignore = all
 [submodule "vue-element-admin"]
 	path = vue-element-admin
 	url = https://github.com/PanJiaChen/vue-element-admin.git
 	branch = master
-  ignore = all
+	ignore = all
 [submodule "vetur"]
 	path = vetur
 	url = git@github.com:vuejs/vetur.git
 	branch = master
-  ignore = all
+	ignore = all
 [submodule "vue-router"]
 	path = vue-router
 	url = git@github.com:vuejs/vue-router.git
 	branch = master
-  ignore = all
+	ignore = all
 [submodule "vuex"]
 	path = vuex
 	url = git@github.com:vuejs/vuex.git
-  branch = master
-  ignore = all
+	branch = master
+	ignore = all
 [submodule "ant-design-vue"]
 	path = ant-design-vue
 	url = git@github.com:vueComponent/ant-design-vue.git
+	branch = master
+	ignore = all
