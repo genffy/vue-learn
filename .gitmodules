@@ -48,3 +48,6 @@
 	url = git@github.com:vuejs/vuex.git
   branch = master
   ignore = all
+[submodule "ant-design-vue"]
+	path = ant-design-vue
+	url = git@github.com:vueComponent/ant-design-vue.git
