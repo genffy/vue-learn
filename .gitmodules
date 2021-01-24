@@ -59,3 +59,5 @@
 [submodule "vue-next"]
 	path = vue-next
 	url = https://github.com.cnpmjs.org/vuejs/vue-next.git
+	branch = master
+	ignore = all
