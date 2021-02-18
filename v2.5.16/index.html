@@ -42,22 +42,22 @@
 
 <body>
     <div id="app">
-        <div class="header-container" v-bind:style="headerStlye" v-on:click="click01($event)">
+        <!-- <div class="header-container" v-bind:style="headerStlye" v-on:click="click01($event)">
             <h1>标题</h1>
             <p>正文</p>
-        </div>
-        <input type="text" v-model="val">
-        <child-test :test-message="mess" v-on:click="test01($event)" v-on:componenton="test02">
+        </div> -->
+        <input type="text" v-model="val" @change="handleChange($event)">
+        <!-- <child-test :test-message="mess" v-on:click="test01($event)" v-on:componenton="test02">
             <p class="colorfull">solt什么的</p>
-        </child-test>
+        </child-test> -->
         <hr>
-        <div class="demo">
+        <!-- <div class="demo">
             <button v-for="tab in tabs" v-bind:key="tab" v-bind:class="['tab-button', { active: currentTab === tab }]"
                 v-on:click="currentTab = tab">{{ tab }}</button>
             <transition name="fade" mode="out-in" type="animation" @after-enter="transitionComplete">
                 <component v-bind:is="currentTabComponent" class="tab"></component>
             </transition>
-        </div>
+        </div> -->
     </div>
     <template id="tplt01">
         <div>
@@ -68,15 +68,15 @@
         </div>
     </template>
     <script>
-        Vue.component('tab-home', {
-            template: '<div>Home component</div>'
-        })
-        Vue.component('tab-posts', {
-            template: '<div>Posts component</div>'
-        })
-        Vue.component('tab-archive', {
-            template: '<div>Archive component</div>'
-        })
+        // Vue.component('tab-home', {
+        //     template: '<div>Home component</div>'
+        // })
+        // Vue.component('tab-posts', {
+        //     template: '<div>Posts component</div>'
+        // })
+        // Vue.component('tab-archive', {
+        //     template: '<div>Archive component</div>'
+        // })
 
         var vm = new Vue({
             'el': '#app',
@@ -101,36 +101,43 @@
                 },
                 transitionComplete: function (el) {
                     console.log("动画执行结束", Date.now());
+                },
+                handleChange: function(e) {
+                    console.log(this.val, e.currentTarget.value)
                 }
             },
             computed: {
                 valC: function () {
                     console.log('watch val---', this.val);
+                    return this.val
                 },
                 currentTabComponent: function () {
                     return 'tab-' + this.currentTab.toLowerCase()
                 }
             },
             components: {
-                'childTest': {
-                    template: "#tplt01",
-                    props: ['testMessage'],
-                    methods: {
-                        // test01: function (e) {
-                        //     alert('01号被点了！');
-                        // },
-                        test02: function () {
-                            alert('001号被点了！');
-                        },
-                        test001: function () {
-                            console.log('this->', this);
-                            alert('000001号被点了！');
-                        }
-                    },
-                    mounted: function () {
-                        console.log('---?', this)
-                    },
-                }
+                // 'childTest': {
+                //     template: "#tplt01",
+                //     props: ['testMessage'],
+                //     methods: {
+                //         // test01: function (e) {
+                //         //     alert('01号被点了！');
+                //         // },
+                //         test02: function () {
+                //             alert('001号被点了！');
+                //         },
+                //         test001: function () {
+                //             console.log('this->', this);
+                //             alert('000001号被点了！');
+                //         }
+                //     },
+                //     mounted: function () {
+                //         console.log('---?', this)
+                //     },
+                // }
+            },
+            mounted() {
+                console.log('valC', this.valC)
             }
         });
     </script>

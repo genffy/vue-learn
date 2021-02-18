@@ -4707,7 +4707,7 @@ function dedupe (latest, extended, sealed) {
     return latest
   }
 }
-
+// how to detach which way call `Vue`
 function Vue (options) {
   if ("development" !== 'production' &&
     !(this instanceof Vue)
