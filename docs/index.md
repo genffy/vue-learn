@@ -5,11 +5,11 @@ tagline: learn vue by some exercises
 actionText: Quick Start →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
+- title: How Vue work
+  details: deep analysis vue
+- title: How element-ui work
+  details: how to build a ui framework
+- title: What can we learn
+  details: build a cool production
 footer: Made by genffy with ❤️
 ---
