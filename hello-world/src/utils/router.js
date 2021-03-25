@@ -9,21 +9,19 @@ export default (requireContext) => {
     //     false,
     //     /\.vue$/
     // )
-
-    const components = requireContext.keys().map(filename => {
-        const componentConfig = requireContext(filename)
-        return componentConfig.default || componentConfig;
-    })
-
+    console.log('requireContext', requireContext.keys())
     const routes = [
         { path: '', redirect: 'index', },
     ]
-    components.forEach(component => {
-        const fileName = component.__file.split('/').pop().replace(/\.vue$/, '');
+    requireContext.keys().map(filename => {
+        const componentConfig = requireContext(filename)
+        const component = componentConfig.default || componentConfig;
+        const fileName = filename.split('/').pop().replace(/\.vue$/, '');
         routes.push({
             path: `/${fileName}`,
             component,
         })
-    });
+    })
+
     return routes;
 }
