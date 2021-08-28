@@ -52,10 +52,11 @@ module.exports = {
   },
   devServer: {
     port: 3000, // 服务端口
-    host: 'b.zmlearn.com',
-    https: {
-      key: resolve('ssl/server.key'),
-      cert: resolve('ssl/server.pem'),
-    },
+    host: 'localhost',
+    http2: true,
+    // proxy: {
+    //   '/api': '',
+    // },
+    before: require('./mock/mock-server.js')
   },
 }
