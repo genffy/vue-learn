@@ -27,7 +27,7 @@ try {
 }
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
-  publicPath: '/hello-world/dist/',
+  publicPath: '',
   pages,
   lintOnSave: process.env.NODE_ENV === 'development',
   configureWebpack: {
@@ -46,8 +46,16 @@ module.exports = {
       }
     },
     externals: {
-      'vue': 'Vue',
-      'element-ui' : 'ELEMENT',
+      // 'vue': 'Vue',
+      // 'element-ui' : 'ELEMENT',
     }
+  },
+  devServer: {
+    port: 3000, // 服务端口
+    host: 'b.zmlearn.com',
+    https: {
+      key: resolve('ssl/server.key'),
+      cert: resolve('ssl/server.pem'),
+    },
   },
 }

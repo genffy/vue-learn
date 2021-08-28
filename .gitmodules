@@ -1,58 +1,30 @@
-[submodule "component-compiler-utils"]
-	path = component-compiler-utils
-	url = https://github.com/vuejs/component-compiler-utils.git
+[submodule "zoos/vue-loader"]
+	path = zoos/vue-loader
+	url = git@github.com:vuejs/vue-loader.git
 	branch = master
 	ignore = all
-[submodule "vue-style-loader"]
-	path = vue-style-loader
-	url = https://github.com/vuejs/vue-style-loader.git
+[submodule "zoos/vue"]
+	path = zoos/vue
+	url = git@github.com:vuejs/vue.git
 	branch = master
 	ignore = all
-[submodule "vue-loader"]
-	path = vue-loader
-	url = https://github.com/vuejs/vue-loader.git
+[submodule "zoos/element"]
+	path = zoos/element
+	url = git@github.com:ElemeFE/element.git
 	branch = master
 	ignore = all
-[submodule "vue-eslint-parser"]
-	path = vue-eslint-parser
-	url = https://github.com/mysticatea/vue-eslint-parser.git
+[submodule "zoos/vue-router"]
+	path = zoos/vue-router
+	url = git@github.com:vuejs/vue-router.git
 	branch = master
 	ignore = all
-[submodule "vue"]
-	path = vue
-	url = https://github.com/vuejs/vue.git 
+[submodule "zoos/vuex"]
+	path = zoos/vuex
+	url = git@github.com:vuejs/vuex.git
 	branch = master
 	ignore = all
-[submodule "elements/element-2.14.1"]
-	path = elements/element-2.14.1
-	url = https://github.com/ElemeFE/element.git
-	tag = "v2.14.1"
-[submodule "elements/element-1.2.5"]
-	path = elements/element-1.2.5
-	url = https://github.com/ElemeFE/element.git
-	tag = "v1.2.5"
-[submodule "vue-element-admin"]
-	path = vue-element-admin
-	url = https://github.com/PanJiaChen/vue-element-admin.git
-	branch = master
-	ignore = all
-[submodule "vetur"]
-	path = vetur
-	url = https://github.com/vuejs/vetur.git
-	branch = master
-	ignore = all
-[submodule "vue-router"]
-	path = vue-router
-	url = https://github.com/vuejs/vue-router.git
-	branch = master
-	ignore = all
-[submodule "vuex"]
-	path = vuex
-	url = https://github.com/vuejs/vuex.git
-	branch = master
-	ignore = all
-[submodule "vue-next"]
-	path = vue-next
-	url = https://github.com/vuejs/vue-next.git
+[submodule "zoos/vue-next"]
+	path = zoos/vue-next
+	url = git@github.com:vuejs/vue-next.git
 	branch = master
 	ignore = all
