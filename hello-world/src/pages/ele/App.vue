@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <el-button @click="remoteGet">mock everything</el-button>
     <router-view></router-view>
   </div>
 </template>
@@ -8,7 +9,11 @@
 export default {
   name: 'app',
   methods: {
-   
+    remoteGet() {
+      this.$Fetch('/api/transaction/list').then(res=>{
+        console.log('mock', res);
+      })
+    }
   },
   mounted() {
 

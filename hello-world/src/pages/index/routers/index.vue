@@ -1,6 +1,7 @@
 <template>
   <div>
     demo
+    <el-button @click="clickHandle">mock search</el-button>
   </div>
 </template>
 
@@ -11,6 +12,9 @@ export default {
   },
   methods: {
     clickHandle() {
+      this.$Fetch('/api/search/user').then(res=>{
+        console.log('search user', res);
+      })
     }
   }
 }

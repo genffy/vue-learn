@@ -4,7 +4,7 @@ const { param2Obj } = require('../utils')
 const search = require('./remote-search')
 
 const mocks = [
-  ...search
+  ...search,
 ]
 
 // for front mock

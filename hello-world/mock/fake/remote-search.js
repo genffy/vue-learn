@@ -32,7 +32,7 @@ module.exports = [
   {
     url: '/transaction/list',
     type: 'get',
-    response: _ => {
+    response: () => {
       return {
         code: 20000,
         data: {

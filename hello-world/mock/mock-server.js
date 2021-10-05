@@ -65,7 +65,11 @@ module.exports = app => {
 
   // watch files, hot reload mock server
   chokidar.watch(mockDir, {
-    ignored: /mock-server/,
+    ignored: [
+      /mock-server/,
+      '.DS_Store',
+      '.gitignore',
+    ],
     ignoreInitial: true
   }).on('all', (event, path) => {
     if (event === 'change' || event === 'add') {

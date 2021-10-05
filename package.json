@@ -15,6 +15,7 @@
     "vuepress": "^2.0.0-alpha.25"
   },
   "scripts": {
+    "dev:hello": "cd ./hello-world && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sub": "git submodule init && git submodule update --remote",
     "static": "node_modules/.bin/webpack serve",

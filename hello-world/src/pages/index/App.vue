@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style>
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -53,7 +53,7 @@ module.exports = {
   devServer: {
     port: 3000, // 服务端口
     host: 'localhost',
-    http2: true,
+    // http2: true,
     // proxy: {
     //   '/api': '',
     // },
