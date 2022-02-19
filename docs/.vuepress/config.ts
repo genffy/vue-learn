@@ -4,12 +4,28 @@ import { name } from '../../package.json'
 const config: UserConfig<DefaultThemeOptions> = {
   base: `/${name}/`,
   lang: 'zh-CN',
-  title: 'Learn Vue By Upgrade Element-ui',
+  title: 'Learn Vue',
   description: 'Just playing around',
-
+  theme: '@vuepress/theme-default',
   themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
+    logo: '/images/vue.svg',
+    navbar: [
+      // NavbarItem
+      {
+        text: 'Github',
+        link: 'https://github.com/genffy',
+      },
+      {
+        text: 'Email',
+        link: 'mailto:lee.genffy@gmail.com',
+      },
+      {
+        text: 'DM',
+        link: 'https://t.me/genffy',
+      }
+    ],
   },
+  head: [['link', { rel: 'icon', href: '/images/vue.svg' }]],
 }
 
 export = config

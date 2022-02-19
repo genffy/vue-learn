@@ -7,9 +7,9 @@ actionLink: /guide/
 features:
 - title: How Vue work
   details: deep analysis vue
-- title: How element-ui work
-  details: how to build a ui framework
+- title: How vue's lib work
+  details: how to build a lib base vue
 - title: What can we learn
   details: build a cool production
-footer: Made by genffy with ❤️
+footer: by genffy with ❤️
 ---
