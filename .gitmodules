@@ -1,0 +1,3 @@
+[submodule "mod/vue-router"]
+	path = mod/vue-router
+	url = git@github.com:vuejs/router.git
